@@ -1,0 +1,50 @@
+<div class="navbar">
+  <div class="logo"><img src="assets/img/favicon.ico" alt="" /></div>
+  <div class="navigationLinks">
+    <button (click)="goToBoard()">Board</button>
+    <button (click)="goToAddTask()">Add Task</button>
+  </div>
+</div>
+
+<div class="content">
+  <h2>Back-Log</h2>
+  <h4>Here you can see the created Tasks.</h4>
+  <div class="backlogDiv">
+    <table>
+      <tr class="firstTR">
+        <th class="TH">Title</th>
+        <th class="TH">Created At</th>
+        <th class="TH">Category</th>
+        <th class="TH">Urgency</th>
+        <th class="TH">Description</th>
+      </tr>
+      <tr class="TR" *ngFor="let task of globalArray.backlogArray">
+        <td>
+          <div class="taskDiv">
+            {{ task?.title }}
+          </div>
+        </td>
+        <td>
+          <div class="createdDiv">
+            {{ task?.createdAt }}
+          </div>
+        </td>
+        <td>
+          <div class="cateoryDiv">
+            {{ task?.category }}
+          </div>
+        </td>
+        <td>
+          <div class="urgencyDiv">
+            {{ task?.urgency }}
+          </div>
+        </td>
+        <td>
+          <div class="descDiv">
+            {{ task?.description }}
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

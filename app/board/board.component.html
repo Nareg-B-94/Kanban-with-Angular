@@ -1,0 +1,140 @@
+<div class="navbar">
+  <div class="logo"><img src="assets/img/favicon.ico" alt="" /></div>
+  <div class="navigationLinks">
+    <button (click)="goToBacklog()">Back-Log</button>
+    <button (click)="goToAddTask()">Add Task</button>
+  </div>
+</div>
+
+<div class="content">
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="globalArray.todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of globalArray.todo; let i = index" cdkDrag>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ item?.title }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ item?.urgency }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{ item?.description }}</p>
+            <mat-icon class="example-icon" (click)="deleteToDo(i)"
+              >delete</mat-icon
+            >
+          </mat-expansion-panel>
+        </div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2>In Progress</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="globalArray.inProgress"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="example-box"
+          *ngFor="let item of globalArray.inProgress; let i = index"
+          cdkDrag
+        >
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ item?.title }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ item?.urgency }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{ item?.description }}</p>
+            <mat-icon (click)="deleteInProgress(i)" class="example-icon"
+              >delete</mat-icon
+            >
+          </mat-expansion-panel>
+        </div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2>Testing</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="globalArray.testing"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="example-box"
+          *ngFor="let item of globalArray.testing; let i = index"
+          cdkDrag
+        >
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ item?.title }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ item?.urgency }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{ item?.description }}</p>
+            <mat-icon (click)="deleteTesting(i)" class="example-icon"
+              >delete</mat-icon
+            >
+          </mat-expansion-panel>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Done</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="globalArray.done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of globalArray.done; let i = index" cdkDrag>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ item?.title }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ item?.urgency }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{ item?.description }}</p>
+            <mat-icon (click)="deleteDone(i)" class="example-icon"
+              >delete</mat-icon
+            >
+          </mat-expansion-panel>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

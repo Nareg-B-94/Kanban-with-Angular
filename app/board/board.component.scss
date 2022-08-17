@@ -1,0 +1,158 @@
+.content {
+  margin-top: 80px;
+  background-image: url("/assets/img/pexels-olia-danilevich-5088017.jpg");
+  min-height: calc(100vh - 0px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.example-container {
+  text-align: center;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.example-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background-color: rgba(128, 128, 128, 0.397);
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 300px;
+
+  mat-expansion-panel {
+    width: 100%;
+    p {
+      max-height: 150px !important;
+      overflow-y: auto;
+      max-width: 230px;
+      word-break: break-all;
+    }
+
+    mat-expansion-panel-header {
+      min-height: 130px;
+
+      mat-icon{
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      mat-panel-description{
+        margin-left: 16px;
+      }
+      mat-panel-title {
+        max-width: 165px;
+        max-height: 100px !important;
+        word-break: break-all;
+        overflow-y: auto;
+        margin: 2px;
+
+      }
+    }
+  }
+}
+
+.example-box {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  // color: rgba(255, 255, 255, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: white;
+  font-size: 14px;
+  background-color: rgb(182, 174, 170);
+  border-radius: 8px;
+  min-height: 150px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+::-webkit-scrollbar {
+  border-radius: 10px;
+  background-color: rgb(178, 145, 94);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #3b0223);
+  border-radius: 8px;
+}
+
+.navbar {
+  justify-content: space-between;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  background-color: rgb(197, 173, 138);
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      cursor: pointer;
+      height: 60px;
+    }
+  }
+  .navigationLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin: 20px;
+      cursor: pointer;
+      font-size: 1.2em;
+      background-color: rgb(184, 184, 164);
+      color: white;
+      height: 50px;
+      width: 100px;
+      border-radius: 8px;
+      box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+      -webkit-box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+      -moz-box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar, .content{
+    overflow-x: hidden;
+  }
+.example-container{
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+}

@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="navbar">
+    <div class="logo">
+      <img (click)="goToHome()" src="assets/img/favicon.ico" alt="" />
+    </div>
+    <div class="navigationLinks">
+      <!-- <button (click)="goToBoard()">Board</button>
+      <button (click)="goToBacklog()">Back-Log</button>
+      <button (click)="goToAddTask()">Add Task</button> -->
+    </div>
+  </div>
+
+  <div class="welcomingText">
+    <h1>Welcome to Kanban</h1>
+    <h3>Your personell workflow management method</h3>
+    <button id="startButton" mat-button (click)="goToBoard()">Start</button>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+.content {
+  .welcomingText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 20vh;
+    button {
+      font-size: 1.2em;
+      background-color: rgb(184, 184, 164);
+      color: white;
+      height: 50px;
+      width: 150px;
+      border-radius: 8px;
+      box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+      -webkit-box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+      -moz-box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+    }
+  }
+
+  #startButton:hover {
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    color: black;
+    background-color: darkgray;
+
+    box-shadow: 24px 31px 37px -9px rgba(255, 255, 255, 0.46);
+    -webkit-box-shadow: 24px 31px 37px -9px rgba(255, 255, 255, 0.46);
+    -moz-box-shadow: 24px 31px 37px -9px rgba(255, 255, 255, 0.46);
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url("/assets/img/pexels-olia-danilevich-5088008.jpg");
+
+  .navbar {
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    background-color: rgb(197, 173, 138);
+    .logo {
+        display: flex;
+        align-items: center;
+      img {
+        cursor: pointer;
+        height: 60px;
+      }
+    }
+    .navigationLinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      button {
+        margin: 20px;
+        cursor: pointer;
+        font-size: 1.2em;
+        background-color: rgb(184, 184, 164);
+        color: white;
+        height: 50px;
+        width: 100px;
+        border-radius: 8px;
+        box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+        -webkit-box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+        -moz-box-shadow: 24px 31px 37px -6px rgba(0, 0, 0, 0.46);
+      }
+
+    }
+  }
+}
