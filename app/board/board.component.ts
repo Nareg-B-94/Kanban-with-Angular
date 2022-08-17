@@ -89,12 +89,21 @@ export class BoardComponent implements OnInit {
   }
 
   deleteToDo(i: any) {
-    // console.log('deleted!');
-    // this.globalArray.todo.FieldValue.delete(i);
-    // this.updateArrays;
+
+    this.globalArray.todo.splice(i, 1);
+    this.updateArrays();
   }
 
-  deleteInProgress(i: any) {}
-  deleteTesting(i: any) {}
-  deleteDone(i: any) {}
+  deleteInProgress(i: any) {
+    this.globalArray.inProgress.splice(i, 1);
+    this.updateArrays();
+  }
+  deleteTesting(i: any) {
+    this.globalArray.testing.splice(i, 1);
+    this.updateArrays();
+  }
+  deleteDone(i: any) {
+    this.globalArray.done.splice(i, 1);
+    this.updateArrays();
+  }
 }
