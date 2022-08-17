@@ -89,9 +89,9 @@ export class BoardComponent implements OnInit {
   }
 
   deleteToDo(i: any) {
-    console.log('deleted!');
-   await this.globalArray.todo.FieldValue.delete(i);
-    this.updateArrays;
+    // console.log('deleted!');
+    // this.globalArray.todo.FieldValue.delete(i);
+    // this.updateArrays;
   }
 
   deleteInProgress(i: any) {}

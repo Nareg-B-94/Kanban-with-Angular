@@ -55,6 +55,8 @@
         word-break: break-all;
         overflow-y: auto;
         margin: 2px;
+            overflow-x: hidden;
+    text-align: start;
 
       }
     }
