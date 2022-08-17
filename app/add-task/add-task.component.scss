@@ -81,3 +81,15 @@
     }
   }
 }
+
+@media (max-width: 470px) {
+  form {
+    width: unset !important;
+  }
+
+  .content {
+    padding-left: unset !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+}
